@@ -11,11 +11,12 @@ const cardW = deviceW - 32; //remove the left and right padding from safe area v
 
 const BACKGROUND_COLOR = ColorPalette.lightRed;
 
-const NewRecipesCard = () => {
+const NewRecipesCard = (props) => {
+  const { title, duration, serve } = props;
   return (
     <View style={styles.container}>
       <View style={styles.detailContainer}>
-        <Text style={styles.title}>Mutton Biryani</Text>
+        <Text style={styles.title}>{title}</Text>
         <Rating
           style={styles.ratingBar}
           type="custom"
@@ -32,7 +33,7 @@ const NewRecipesCard = () => {
               size={20}
               color={ColorPalette.black}
             />
-            <Text style={styles.descriptionText}>10 min</Text>
+            <Text style={styles.descriptionText}>{duration}</Text>
           </View>
           <View
             style={[
@@ -47,7 +48,7 @@ const NewRecipesCard = () => {
               size={20}
               color={ColorPalette.black}
             />
-            <Text style={styles.descriptionText}>2 serve</Text>
+            <Text style={styles.descriptionText}>{serve}</Text>
           </View>
         </View>
       </View>

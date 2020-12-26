@@ -8,18 +8,18 @@ const deviceH = Dimensions.get("screen").height;
 const deviceW = Dimensions.get("screen").width;
 
 const RecommendedItemCard = (props) => {
-  const { backgroundColor } = props;
+  const { backgroundColor, name, duration, serve, image } = props;
   const propStyles = { backgroundColor };
   return (
     <View style={[styles.container, propStyles]}>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
-          source={require("../assets/images/plate_01.png")}
+          source={require('../assets/images/plate_01.png')}
         />
       </View>
       <View style={styles.detailsContainer}>
-        <Text style={styles.title}>Ovos moles de papaia</Text>
+        <Text style={styles.title}>{name}</Text>
         <Rating
           style={styles.ratingBar}
           type="custom"
@@ -36,7 +36,7 @@ const RecommendedItemCard = (props) => {
               size={20}
               color={ColorPalette.white}
             />
-            <Text style={styles.descriptionText}>5 min</Text>
+            <Text style={styles.descriptionText}>{duration}</Text>
           </View>
           <View
             style={[
@@ -51,7 +51,7 @@ const RecommendedItemCard = (props) => {
               size={20}
               color={ColorPalette.white}
             />
-            <Text style={styles.descriptionText}>1 serve</Text>
+            <Text style={styles.descriptionText}>{serve}</Text>
           </View>
         </View>
       </View>

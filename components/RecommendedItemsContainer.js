@@ -2,8 +2,23 @@ import React from "react";
 import { View, ScrollView, Text, StyleSheet } from "react-native";
 import { ColorPalette, fonts } from "../themeColors";
 import RecommendedItemCard from "./RecommendedItemCard";
+import recommendedItems from "../recommended.json";
 
 const RecommendedItemsContainer = () => {
+  console.log(recommendedItems);
+  const _renderRecommendedItemList = () => {
+    return recommendedItems.map((item) => {
+      return (
+        <RecommendedItemCard
+          key={item.id}
+          backgroundColor={item.backgroundColor}
+          name={item.name}
+          duration={item.duration}
+          serve={item.serve}
+        />
+      );
+    });
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Recommended</Text>
@@ -12,8 +27,7 @@ const RecommendedItemsContainer = () => {
         showsHorizontalScrollIndicator={false}
         style={styles.itemContainer}
       >
-        <RecommendedItemCard backgroundColor={ColorPalette.darkGreen} />
-        <RecommendedItemCard backgroundColor={ColorPalette.yellow} />
+        {_renderRecommendedItemList()}
       </ScrollView>
     </View>
   );
