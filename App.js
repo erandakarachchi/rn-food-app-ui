@@ -3,6 +3,7 @@ import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { HomeContainer } from "./components";
 import { useFonts } from "@use-expo/font";
+import { ColorPalette } from "./themeColors";
 
 const customFonts = {
   Montserrat: require("./assets/fonts/Montserrat.ttf"),
@@ -33,7 +34,7 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: ColorPalette.ultraLightGrey,
     padding: 16,
   },
 });
