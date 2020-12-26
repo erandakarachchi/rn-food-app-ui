@@ -1,0 +1,12 @@
+{
+  "name": "food_app_ui",
+  "displayName": "food_app_ui",
+  "expo": {
+    "name": "food_app_ui",
+    "slug": "food_app_ui",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
