@@ -29,6 +29,7 @@ const BORDER_RADIUS = 8;
 const styles = StyleSheet.create({
   container: {
     marginTop: 16,
+    marginBottom: 16,
     height: 50,
     width: deviceW - 32,
     flexDirection: "row",

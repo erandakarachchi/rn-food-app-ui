@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderBar from "./HeaderBar";
 import SearchBar from "./SearchBar";
+import RecommendedItemsContainer from "./RecommendedItemsContainer";
 import { View, StyleSheet } from "react-native";
 
 const HomeContainer = () => {
@@ -8,6 +9,7 @@ const HomeContainer = () => {
     <View style={styles.mainContainer}>
       <HeaderBar />
       <SearchBar />
+      <RecommendedItemsContainer />
     </View>
   );
 };
