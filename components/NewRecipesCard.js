@@ -35,7 +35,7 @@ const NewRecipesCard = (props) => {
             <AntDesign
               name="clockcircleo"
               size={20}
-              color={ColorPalette.black}
+              color={ColorPalette.grey}
             />
             <Text style={styles.descriptionText}>{duration}</Text>
           </View>
@@ -50,7 +50,7 @@ const NewRecipesCard = (props) => {
             <MaterialCommunityIcons
               name="food-drumstick-outline"
               size={20}
-              color={ColorPalette.black}
+              color={ColorPalette.grey}
             />
             <Text style={styles.descriptionText}>{serve}</Text>
           </View>
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
   },
   descriptionText: {
-    color: ColorPalette.black,
+    color: ColorPalette.grey,
     fontFamily: fonts.MONTSERRAT_BOLD,
   },
   durationContainer: {
