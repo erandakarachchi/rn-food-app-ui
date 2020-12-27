@@ -1,0 +1,21 @@
+[
+    {
+        "id":1,
+        "name":"Sushi",
+        "duration":"20 mins",
+        "serve":"4 serve",
+        "backgroundColor":"#329895",
+    },
+    {   "id":2,
+        "name":"Meat Pie",
+        "duration":"9 mins",
+        "serve":"1 serve",
+        "backgroundColor":"#e6b566",
+    },
+    {   "id":3,
+        "name":"Quesadilla",
+        "duration":"6 mins",
+        "serve":"2 serve",
+        "backgroundColor":"#f05454",
+    }
+]

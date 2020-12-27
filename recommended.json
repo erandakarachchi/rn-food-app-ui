@@ -1,0 +1,21 @@
+[
+    {
+        "id":1,
+        "name":"Ovos moles de papaia",
+        "duration":"8 mins",
+        "serve":"1 serve",
+        "backgroundColor":"#329895",
+    },
+    {   "id":2,
+        "name":"Massaman curry",
+        "duration":"5 mins",
+        "serve":"2 serve",
+        "backgroundColor":"#e6b566",
+    },
+    {   "id":3,
+        "name":"Penang assam laksa",
+        "duration":"15 mins",
+        "serve":"1 serve",
+        "backgroundColor":"#f05454",
+    }
+]

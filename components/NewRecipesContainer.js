@@ -9,6 +9,7 @@ const NewRecipesContainer = () => {
     return newRecipesItemList.map((item) => {
       return (
         <NewRecipesCard
+          key={item.id}
           title={item.name}
           duration={item.duration}
           serve={item.serve}

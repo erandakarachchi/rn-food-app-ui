@@ -3,20 +3,21 @@ import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 import { ColorPalette, fonts } from "../themeColors";
 import { Rating } from "react-native-ratings";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import { images } from "../imageData";
 
 const deviceH = Dimensions.get("screen").height;
 const deviceW = Dimensions.get("screen").width;
 
 const RecommendedItemCard = (props) => {
-  const { backgroundColor, name, duration, serve, image } = props;
+  const { backgroundColor, name, duration, serve } = props;
   const propStyles = { backgroundColor };
+  const getRandomInt = () => {
+    return Math.floor(Math.random() * Math.floor(3));
+  };
   return (
     <View style={[styles.container, propStyles]}>
       <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={require('../assets/images/plate_01.png')}
-        />
+        <Image style={styles.image} source={images[getRandomInt()]} />
       </View>
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{name}</Text>
@@ -73,10 +74,13 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 2,
+    alignItems: "center",
+    justifyContent: "center",
   },
   image: {
     height: cardH * 0.6,
     width: cardH * 0.5,
+    alignSelf: "center",
   },
   detailsContainer: {
     flex: 1,

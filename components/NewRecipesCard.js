@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
 import { ColorPalette, fonts } from "../themeColors";
 import { Rating } from "react-native-ratings";
 import { AntDesign, MaterialCommunityIcons } from "@expo/vector-icons";
+import { images } from "../imageData";
 
 const deviceH = Dimensions.get("screen").height;
 const deviceW = Dimensions.get("screen").width;
@@ -12,6 +13,9 @@ const cardW = deviceW - 32; //remove the left and right padding from safe area v
 const BACKGROUND_COLOR = ColorPalette.lightRed;
 
 const NewRecipesCard = (props) => {
+  const getRandomInt = () => {
+    return Math.floor(Math.random() * Math.floor(3));
+  };
   const { title, duration, serve } = props;
   return (
     <View style={styles.container}>
@@ -53,10 +57,7 @@ const NewRecipesCard = (props) => {
         </View>
       </View>
       <View style={styles.imageContainer}>
-        <Image
-          style={styles.image}
-          source={require("../assets/images/plate_04.png")}
-        />
+        <Image style={styles.image} source={images[getRandomInt()]} />
       </View>
     </View>
   );
